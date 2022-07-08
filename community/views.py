@@ -70,7 +70,7 @@ class PostViewSet(viewsets.ModelViewSet):
         self.queryset = CommunityPostSerializers.setup_eager_loading(self.queryset, request)
         post = self.get_community_post(pk)
         serialized = CommunityPostSerializers(post, context={'request': request}).data
-
+        
         return Response(serialized)
     
     def retrieve_min(self, request, pk):
@@ -97,7 +97,7 @@ class PostViewSet(viewsets.ModelViewSet):
         serializer = CommunityPostSerializerMin(queryset, many=True, context={'request': request})
         data = serializer.data
 
-        return Response({'count': len(data), 'data': data})
+        return Response(data)
     @login_required_ajax
     def create(self, request):
         """Create Post.

@@ -64,7 +64,7 @@ class CommunityPost(models.Model):
     status = models.IntegerField()
 
     def save(self, *args, **kwargs):        # pylint: disable=W0222
-        self.str_id = get_url_friendly(self.time_of_creation) + "-" + str(self.id)[:8]
+        self.str_id = get_url_friendly(str(self.time_of_creation)) + "-" + str(self.id)[:8]
         super().save(*args, **kwargs)
 
     class Meta:

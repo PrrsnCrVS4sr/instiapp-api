@@ -15,7 +15,7 @@ urlpatterns = [
         'get': 'list','post': 'create','put': 'update'
     })),#viewing the list of posts in their minimum view
 
-    path('communitiesposts/<pk>', PostViewSet.as_view({
+    path('communityposts/<pk>', PostViewSet.as_view({
         'get': 'retrieve_full',
     })),#to get the full view of a post
 ]
