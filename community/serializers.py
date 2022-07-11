@@ -54,4 +54,4 @@ class CommunityPostSerializers(CommunityPostSerializerMin):
         model = CommunityPost
         fields = ('id', 'str_id', 'content', 'posted_by',
                   'reactions_count', 'user_reaction', 'comments_count', 'time_of_creation', 'time_of_modification',
-                  'image_url', 'comments')
+                  'image_url', 'comments','community','thread_rank','parent')

@@ -53,6 +53,7 @@ INSTALLED_APPS = [
 
     'notifications',
     'markdownify',
+    'multiselectfield'
 ]
 
 MIDDLEWARE = [
